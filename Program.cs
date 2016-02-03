@@ -13,6 +13,7 @@ namespace Stack
             StackClass myStack = new StackClass();
             while (true)
             {
+                // clear the console
                 Console.Clear();
                 Console.WriteLine("\nStack MENU(size - - 10)");
                 Console.WriteLine("1. Add an element.");
