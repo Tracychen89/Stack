@@ -74,13 +74,13 @@ namespace Stack
     class StackClass : StackADT
     {
         // I don't understand get and set accessor.
-        private int StackSize;
-        public int StackSizeSet
-        {
-            get { return StackSize; }
-            set { StackSize = value; }
+      //  private int StackSize;
+        public int StackSizeSet;
+        //{
+        //    get { return StackSize; }
+        //    set { StackSize = value; }
 
-        }
+        //}
         // defining a int data type named top 
         public int top;
         // defining a object array named item
@@ -112,7 +112,7 @@ namespace Stack
         // creat  a public method named Push and takes object element as argument. no output.
         public void Push(object element)
         {
-            if (top == (StackSize - 1))
+            if (top == (StackSizeSet - 1))
             {
                 Console.WriteLine("Stack is full!");
             }
