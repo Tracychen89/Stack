@@ -10,6 +10,7 @@ namespace Stack
     {
         static void Main(string[] args)
         {
+            //creat stack instance
             StackClass myStack = new StackClass();
             while (true)
             {
