@@ -8,6 +8,7 @@ namespace Stack
 {
     class Program
     {
+        // entrance of the class
         static void Main(string[] args)
         {
             StackClass myStack = new StackClass();
