@@ -7,3 +7,6 @@ C:\Users\chenxin\Documents\Visual Studio 2013\Projects\Leetcode\Stack\Stack\obj\
 C:\Users\chenxin\Documents\GitHub\Stack\Stack\bin\Debug\Stack.exe.config
 C:\Users\chenxin\Documents\GitHub\Stack\Stack\obj\Debug\Stack.exe
 C:\Users\chenxin\Documents\GitHub\Stack\Stack\obj\Debug\Stack.pdb
+C:\Users\chenxin\Documents\GitHub\Stack\Stack\bin\Debug\Stack.exe
+C:\Users\chenxin\Documents\GitHub\Stack\Stack\bin\Debug\Stack.pdb
+C:\Users\chenxin\Documents\GitHub\Stack\Stack\obj\Debug\Stack.csprojResolveAssemblyReference.cache
