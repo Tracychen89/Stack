@@ -12,13 +12,13 @@ namespace Stack
         static void Main(string[] args)
         {
             // creat a StackClass object named myStack
-            StackClass myStack = new StackClass();
+            StackClass myStack = new StackClass(19);
            // use while loop to show users some information about the stack and some choices for them to choose
             while (true)
             {
                 // clear the console
                 Console.Clear();
-                Console.WriteLine("\nStack MENU(size - - 10)");
+                Console.WriteLine("\nStack MENU(size - - {0})", myStack.StackSizeSet);
                 Console.WriteLine("1. Add an element.");
                 Console.WriteLine("2. See the Top element.");
                 Console.WriteLine("3. Remove top element.");
@@ -74,13 +74,13 @@ namespace Stack
     class StackClass : StackADT
     {
         // I don't understand get and set accessor.
-      //  private int StackSize;
-        public int StackSizeSet;
-        //{
-        //    get { return StackSize; }
-        //    set { StackSize = value; }
+        private int StackSize;
+        public int StackSizeSet
+        {
+            get { return StackSize; }
+            set { StackSize = value; }
 
-        //}
+        }
         // defining a int data type named top 
         public int top;
         // defining a object array named item
@@ -112,12 +112,13 @@ namespace Stack
         // creat  a public method named Push and takes object element as argument. no output.
         public void Push(object element)
         {
-            if (top == (StackSizeSet - 1))
+            if (top == (StackSize - 1))
             {
                 Console.WriteLine("Stack is full!");
             }
             else 
             {
+                // ++x operator is prefix increment: return x value after updating the storage location with x + 1 
                 item[++top] = element;
                 Console.WriteLine("Item pushed successfully!");
             
@@ -134,11 +135,12 @@ namespace Stack
             }
             else
             {
+                // x-- operator is postfix decrement: return x value and update the storage location with x - 1
                 return item[top--];
             }
         }
         // creat a method named Peek and output is object data type
-
+       
         public object Peek()
         {
             if (isEmpty())
