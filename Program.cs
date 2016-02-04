@@ -64,10 +64,15 @@ namespace Stack
     // creat a interface 
     interface StackADT
     {
+        // declare isEmpty as bool data type
         Boolean isEmpty();
+        // declare a method Push and it has one parameter without output
         void Push(Object element);
+        // declare a method Pop and it has output
         object Pop();
+        // delcare a method Peek and it has output 
         Object Peek();
+        // delcare a method Display and it has no output
         void Display();
     }
     // creat a derived class StackClass based on base class StackADT
@@ -89,22 +94,29 @@ namespace Stack
         //Default constructor is invoked whenever an object is instantiated by new opertor and no argument provide to new. 
         public StackClass()
         {
+            // initialize StackSizeSet as 10
             StackSizeSet = 10;
+            // assign item as a object array can hold 10 element 
             item = new Object[StackSizeSet];
+            // assign -1 to top
             top = -1;
         }
 
         // creat constructor StackClass takes int capacity as argument. Default construtor is invoked when new operator is used.
         public StackClass(int capacity)
         {
+            // assign capacity to StackSizeSet
             StackSizeSet = capacity;
+            // assign item as a object array can hold the amount of element which equal to value of StackSizeSet 
             item = new Object[StackSizeSet];
+            // assign -1 to top
             top = -1;
         }
         // creat a public method named isEmpty and return bool data taype output.
 
         public bool isEmpty()
         {
+            // use if statement  to decide isEmpty to be 0 or 1
             if (top == -1) return true;
 
             return false;
@@ -112,6 +124,7 @@ namespace Stack
         // creat  a public method named Push and takes object element as argument. no output.
         public void Push(object element)
         {
+            // use if statement to decide whether stack if full or not 
             if (top == (StackSize - 1))
             {
                 Console.WriteLine("Stack is full!");
@@ -119,6 +132,7 @@ namespace Stack
             else 
             {
                 // ++x operator is prefix increment: return x value after updating the storage location with x + 1 
+                // assign element to item[]
                 item[++top] = element;
                 Console.WriteLine("Item pushed successfully!");
             
@@ -128,11 +142,13 @@ namespace Stack
         // creat a method named Pop and output is object data type
         public object Pop()
         {
+            // if isEmpty is 1 then excuate code in {}
             if (isEmpty())
             {
                 Console.WriteLine("Stack is empty!");
                     return "No elements";
             }
+            // if isEmpty is 0 then excuate code in {}
             else
             {
                 // x-- operator is postfix decrement: return x value and update the storage location with x - 1
@@ -143,11 +159,13 @@ namespace Stack
        
         public object Peek()
         {
+            // if isEmpty is 1 then excuate code in {}
             if (isEmpty())
             {
                 Console.WriteLine("Stack is empty!");
                 return "No elements";
             }
+            // if isEmpty is 0 then return item[]
             else
             {
                 return item[top];
@@ -157,6 +175,7 @@ namespace Stack
         // creat a method named Display  and no output.
         public void Display()
         {
+            // use for loop to console array item
             for (int i = top; i > -1; i--)
             {
                 Console.WriteLine("Item {0}: {1}", (i + 1), item[i]);
